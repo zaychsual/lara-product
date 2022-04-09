@@ -17,7 +17,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $data = Product::latest()->paginate(10);
+        $data = Product::get();
 
         return new ProductResource(true, 'List Products', $data);
     }
